@@ -1,0 +1,24 @@
+.cover img {
+    width: 100%;
+    margin: 0 auto;
+    max-height: 100px;
+    min-width: 400px;
+}
+
+.profile {
+    display: flex;
+    flex-flow: column;
+}
+
+.profileInfo {
+    padding-left: 50px;
+}
+
+.profileHead {
+    display: flex;
+    align-items: center;
+}
+
+.ava img{
+    border-radius: 50%;
+}

@@ -1,0 +1,47 @@
+.dialogsPage {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+
+.dialogsList {
+    /*width: 300px;*/
+    background-color: rgba(255,255,255,0.9);
+    margin: auto 0;
+    padding: 10px;
+}
+
+
+.messagesList {
+    background-color: rgba(255,255,255,0.2);
+    width: 100%;
+    padding: 40px;
+}
+
+.active {
+    color: #FE6A5C;
+}
+
+.messageInput {
+    display: flex;
+    align-content: center;
+}
+
+.messageInput textarea {
+    width: 400px;
+}
+
+.messageInput button {
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+    padding: 0.5em 0.75em;
+    min-width: 10ch;
+    min-height: 44px;
+    text-align: center;
+    line-height: 1.1;
+}

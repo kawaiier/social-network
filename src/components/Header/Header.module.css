@@ -1,0 +1,18 @@
+.header {
+  grid-area: h;
+  display: flex;
+  align-items: center;
+  background-color: #424242;
+  padding: 10px;
+
+}
+
+.header img {
+  height: 100%;
+}
+
+h1 {
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding-left: 10px;
+}

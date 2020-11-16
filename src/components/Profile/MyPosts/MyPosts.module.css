@@ -1,0 +1,33 @@
+.posts {
+  margin: 40px 30px;
+}
+
+.postInput {
+  display: flex;
+}
+
+.postInput textarea {
+  width: 70ch;
+  height: 10ch;
+}
+
+.postInput button {
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+  padding: 0.5em 0.75em;
+  min-width: 10ch;
+  min-height: 44px;
+  text-align: center;
+  line-height: 1.1;
+}
+
+h2 {
+  color: #FE6A5C;
+  font-size: 30px;
+}

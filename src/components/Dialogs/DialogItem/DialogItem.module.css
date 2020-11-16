@@ -1,0 +1,11 @@
+.dialog {
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.dialog img {
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+}

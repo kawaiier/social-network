@@ -1,0 +1,17 @@
+.message {
+    border: #FE6A5C 1px solid;
+    width: fit-content;
+    padding: 10px;
+    background-color: ghostwhite;
+    margin: 20px 5px;
+    box-shadow: 2px 2px 1px #424242;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.message img{
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+}

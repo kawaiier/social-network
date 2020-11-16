@@ -1,0 +1,30 @@
+.post {
+  display: flex;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+p {
+  color:white;
+  padding-left: 20px;
+  padding-right: 40px;
+  width: 800px;
+}
+
+.post img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.like {
+  background-color: white;
+  padding: 10px;
+  color: #FE6A5C;
+}
+
+.likeCount {
+  color:azure;
+  font-size: 0.8em;
+  padding-left: 10px;
+}
