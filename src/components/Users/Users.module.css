@@ -1,0 +1,69 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.leftSide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rightSide {
+    display: flex;
+    justify-content: space-around;
+    border: #0F0000 1px solid;
+    border-radius: 30px;
+    width: 50%;
+    max-width: 1000px;
+    min-width: 250px;
+    flex-wrap: wrap;
+    height: 150px;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.userpic img {
+    margin: 40px 40px 10px;
+    border-radius: 50%;
+}
+
+.button > button {
+    width: 100%;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.button > button:hover {
+    /*padding: 10px;*/
+    transform: scale(1.2);
+    transition: 500ms linear;
+}
+
+.followButton {
+    background-color: darkgreen;
+}
+
+.unfollowButton {
+    background-color: darkred;
+}
+
+
+.leftProfile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.rightProfile {
+
+}
+
+.userName {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
