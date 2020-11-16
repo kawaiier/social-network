@@ -2,10 +2,10 @@ import React from 'react';
 import s from './Navbar.module.css';
 import {NavLink} from "react-router-dom";
 import Sidebar from "./Sidebar/Sidebar";
+import SidebarContainer from "./Sidebar/SidebarContainer";
 
-const Navbar = (props) => {
-    console.log('This is props in NAVBAR')
-    console.log(props)
+const Navbar = () => {
+
     return (
         <nav className={s.navigation}>
             <div>
@@ -20,8 +20,7 @@ const Navbar = (props) => {
             <div>
                 <NavLink to="/music" activeClassName={s.activeLink}>Music</NavLink>
             </div>
-            <Sidebar />
-            {/*<Sidebar store={props.store} />*/}
+            <SidebarContainer />
             <div>
                 <NavLink to="/settings" activeClassName={s.activeLink}>Settings</NavLink>
             </div>
