@@ -4,12 +4,11 @@ const SET_USERS = 'SET-USERS';
 
 let initialState = {
     users: [
-
+        // {id: 9, followed: true, photoUrl: 'http://avatarmaker.ru/img/11/1044/104306.png', fullName:'Zaza', status:'married', location: {city:'Balashikha', country:'Russia'}},
     ]
-
 }
 
-const usersReducer = (state = initialState, action='') => {
+const usersReducer = (state = initialState, action) => {
     switch (action.type) {
         case FOLLOW:
             return {

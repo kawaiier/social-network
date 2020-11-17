@@ -6,9 +6,7 @@ const Sidebar = (props) => {
 
     let state = props.friendsSidebar;
 
-    console.log(props)
-    console.log(props.friendsData)
-    let friendElements = state.friendsData.map(friend => <Friend image={friend.image} name={friend.name} />)
+    let friendElements = state.friendsData.map(friend => <Friend key={friend.id} image={friend.image} name={friend.name} />)
 
     return (
         <div className={s.sidebar}>
