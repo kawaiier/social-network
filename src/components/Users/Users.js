@@ -4,24 +4,28 @@ import * as axios from 'axios'
 import userPhoto from '../../assets/images/nouserpic.jpg'
 
 const Users = (props) => {
-    if (props.users.length === 0){
+    let getUsers = () => {
+        if (props.users.length === 0){
 
-        axios.get('https://social-network.samuraijs.com/api/1.0/users').then(response => {
-            props.setUsers(response.data.items);
-            props.users.length = response.data.items.length/2;
-            }
-        );
-
-        // props.setUsers([
-        //     {id: 1, followed: true, photoUrl: 'http://avatarmaker.ru/img/11/1044/104306.png', fullName:'Liza', status:'Not married', location: {city:'Balashikha', country:'Russia'}},
-        //     {id: 2, followed: false, photoUrl: 'http://avatarmaker.ru/img/11/1044/104313.jpg', fullName:'Ilia', status:'Looking for a pretty one', location: {city:'London', country:'UK'}},
-        //     {id: 3, followed: false, photoUrl: 'http://avatarmaker.ru/img/11/1033/103260.jpg', fullName:'Georgi', status:'Big peanuts', location: {city:'Capetown', country:'South Africa'}},
-        //     {id: 4, followed: true, photoUrl: 'http://avatarmaker.ru/img/11/1032/103127.jpg', fullName:'Marina', status:'Submarine captain', location: {city:'Seattle', country:'USA'}}
-        // ])
-
+            axios.get('https://social-network.samuraijs.com/api/1.0/users').then(response => {
+                props.setUsers(response.data.items);
+                props.users.length = response.data.items.length/2;
+                }
+            );
+    
+            // props.setUsers([
+            //     {id: 1, followed: true, photoUrl: 'http://avatarmaker.ru/img/11/1044/104306.png', fullName:'Liza', status:'Not married', location: {city:'Balashikha', country:'Russia'}},
+            //     {id: 2, followed: false, photoUrl: 'http://avatarmaker.ru/img/11/1044/104313.jpg', fullName:'Ilia', status:'Looking for a pretty one', location: {city:'London', country:'UK'}},
+            //     {id: 3, followed: false, photoUrl: 'http://avatarmaker.ru/img/11/1033/103260.jpg', fullName:'Georgi', status:'Big peanuts', location: {city:'Capetown', country:'South Africa'}},
+            //     {id: 4, followed: true, photoUrl: 'http://avatarmaker.ru/img/11/1032/103127.jpg', fullName:'Marina', status:'Submarine captain', location: {city:'Seattle', country:'USA'}}
+            // ])
+    
+        }
     }
 
+
     return <div>
+        <button onClick={getUsers}>Get Users</button>
         {
             props.users.map( u =>
                 <div key={u.id} className={s.container}>
