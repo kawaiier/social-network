@@ -69,3 +69,7 @@
     font-weight: bold;
     margin-bottom: 10px;
 }
+
+.selectedPage {
+    font-weight: bold;
+}

@@ -1,11 +1,14 @@
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
 const SET_USERS = 'SET-USERS';
+const SET_CURERNT_PAGE = 'SET-CURERNT-PAGE';
+const SET_TOTAL_USERS_COUNT = 'SET-TOTAL-USERS-COUNT';
 
 let initialState = {
-    users: [
-        // {id: 9, followed: true, photoUrl: 'http://avatarmaker.ru/img/11/1044/104306.png', fullName:'Zaza', status:'married', location: {city:'Balashikha', country:'Russia'}},
-    ]
+    users: [ ],
+    pageSize: 5,
+    totalUsersCount: 0,
+    currentPage: 2
 }
 
 const usersReducer = (state = initialState, action) => {
@@ -33,7 +36,17 @@ const usersReducer = (state = initialState, action) => {
         }
         case SET_USERS: {
             return {
-                ...state, users: [...state.users, ...action.users]
+                ...state, users: action.users
+            }
+        }
+        case SET_CURERNT_PAGE: {
+            return {
+                ...state, currentPage: action.currentPage
+            }
+        }
+        case SET_TOTAL_USERS_COUNT: {
+            return {
+                ...state, totalUsersCount: action.count
             }
         }
         default:
@@ -45,5 +58,7 @@ const usersReducer = (state = initialState, action) => {
 export const followAC = (userID) => ({type: FOLLOW, userID})
 export const unfollowAC = (userID) => ({type: UNFOLLOW, userID})
 export const setUsersAC = (users) => ({type: SET_USERS, users})
+export const setCurrentPageAC = (currentPage) => ({type: SET_CURERNT_PAGE, currentPage})
+export const setUsersTotalCountAC = (totalUsersCount) => ({type: SET_TOTAL_USERS_COUNT, count: totalUsersCount})
 
 export default usersReducer;
