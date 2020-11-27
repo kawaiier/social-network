@@ -14,7 +14,7 @@ body {
   grid-template-rows: 80px 1fr;
   grid-template-columns: 2fr 10fr;
   grid-gap: 10px;
-  height: 98vh;
+  /* height: 98vh; */
 }
 
 .app-wrapper-content {
