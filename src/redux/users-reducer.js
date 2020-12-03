@@ -17,7 +17,7 @@ const usersReducer = (state = initialState, action) => {
     switch (action.type) {
         case FOLLOW:
             return {
-                ...state,
+                ...state, 
                 users: state.users.map(u => {
                     if (u.id === action.userID) {
                         return {...u, followed: true}
