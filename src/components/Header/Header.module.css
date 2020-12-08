@@ -16,3 +16,13 @@ h1 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   padding-left: 10px;
 }
+
+.loginBlock {
+  margin-left: 50%;
+}
+
+.loginBlock a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
