@@ -2,6 +2,7 @@ import { React } from "react";
 import s from './Users.module.css';
 import userPhoto from '../../assets/images/nouserpic.jpg';
 import { NavLink } from 'react-router-dom';
+import axios from 'axios'
 
 let Users = (props) => {
     
@@ -35,7 +36,26 @@ let Users = (props) => {
                             </NavLink>
                             </div>
                             <div className={s.button}>
-                                {u.followed ? <button className={s.unfollowButton} onClick={() => {props.unfollow(u.id)}}>Unfollow</button> : <button className={s.followButton} onClick={() => {props.follow(u.id)}}>Follow</button>}
+                                {u.followed
+                                 ? <button className={s.unfollowButton} onClick={() => {
+                                     axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {
+                                         withCredentials: true, 
+                                         headers: {
+                                             'API-KEY':'dfab80e5-b5bc-4328-b3e0-c5aa77ee4981'
+                                         } 
+                                         }).then(response => {if (response.data.resultCode === 0) {
+                                            props.unfollow(u.id);
+                                         }})
+                                     }}>Unfollow</button> : <button className={s.followButton} onClick={() => { 
+                                         axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {}, {
+                                             withCredentials: true,
+                                             headers: {
+                                             'API-KEY':'dfab80e5-b5bc-4328-b3e0-c5aa77ee4981'
+                                            } 
+                                             }).then(response => {if (response.data.resultCode === 0) {
+                                            props.follow(u.id);
+                                         }})
+                                         }}>Follow</button>}
                             </div>
                         </div>
                         <div className={s.rightSide}>
