@@ -45,6 +45,12 @@
     cursor: pointer;
 }
 
+.button > button:disabled {
+    /*padding: 10px;*/
+    transform: scale(0.8);
+    transition: 500ms linear;
+}
+
 .followButton {
     background-color: darkgreen;
 }
