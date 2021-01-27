@@ -21,10 +21,6 @@ const Dialogs = (props) => {
         props.updateNewMessageBody(body);
     }
 
-    if (!props.isAuth) {
-        return <Redirect to={"/login"}/>
-    }
-
     return (
         <React.Fragment>
             <h2>Dialogs</h2>
